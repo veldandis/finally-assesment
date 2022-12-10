@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
+    'drf_yasg',
+
     'rest_framework_swagger',
 
     'base.apps.BaseConfig',
@@ -141,8 +143,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'finally',
         'USER': 'postgres',
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_URL'),
+        'PASSWORD': 'qWRT#$20212345',
+        'HOST': 'finally-assesment.ceuc9rbouizu.us-east-1.rds.amazonaws.com',
+        # 'PASSWORD': os.environ.get('DB_PASSWORD'),
+        # 'HOST': os.environ.get('DB_URL'),
         'PORT': '5432'
     }
 }
@@ -202,3 +206,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
